@@ -30,7 +30,7 @@ func (ctr *CreateUserController) Run(ctx *gin.Context){
 			Success:  false,
 			Message: "Invalid request",
 			Data:    nil,
-			Error:  err,
+			Error:  err.Error(),
 		})
 		return
 	}
@@ -40,7 +40,7 @@ func (ctr *CreateUserController) Run(ctx *gin.Context){
 			Success:  false,
 			Message: "Invalid request",
 			Data:    nil,
-			Error:  err,
+			Error:  err.Error(),
 		})
 		return
 	}
@@ -52,7 +52,7 @@ func (ctr *CreateUserController) Run(ctx *gin.Context){
 			Success:  false,
 			Message: "Error creating user",
 			Data:    nil,
-			Error:  err,
+			Error:  err.Error(),
 		})
 		return
 	}

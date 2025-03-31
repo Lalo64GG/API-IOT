@@ -31,7 +31,7 @@ func (ctr *CreateHorarioController) Run(ctx *gin.Context){
 			Success:  false,
 			Message: "Invalid request",
 			Data:    nil,
-			Error:  err,
+			Error:  err.Error(),
 		})
 		return
 	}
@@ -41,7 +41,7 @@ func (ctr *CreateHorarioController) Run(ctx *gin.Context){
 			Success:  false,
 			Message: "Invalid request",
 			Data:    nil,
-			Error:  err,
+			Error:  err.Error(),
 		})
 		return
 	}
@@ -53,7 +53,7 @@ func (ctr *CreateHorarioController) Run(ctx *gin.Context){
 			Success:  false,
 			Message: "Error creating horario",
 			Data:    nil,
-			Error:  err,
+			Error:  err.Error(),
 		})
 		return
 	}

@@ -26,7 +26,7 @@ func (ctr *GetByIdController)Run(ctx *gin.Context){
 			Success:  false,
 			Message: "Invalid ID",
 			Data:    nil,
-			Error:  err,
+			Error:  err.Error(),
 		})
         return
 	}
@@ -38,7 +38,7 @@ func (ctr *GetByIdController)Run(ctx *gin.Context){
 			Success:  false,
 			Message: "Error fetching user",
 			Data:    nil,
-			Error:  err,
+			Error:  err.Error(),
 		})
 		return
 	}

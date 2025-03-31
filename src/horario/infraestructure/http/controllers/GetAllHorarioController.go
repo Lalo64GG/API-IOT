@@ -26,7 +26,7 @@ func (ctr *GetAllHorarioController) Run(ctx *gin.Context) {
 			Success:  false,
 			Message: "Error fetching horarios",
 			Data:    nil,
-			Error:  err,
+			Error:  err.Error(),
 		})
 		return
 	}

@@ -10,7 +10,7 @@ import (
 func HorarioRoutes(router *gin.RouterGroup){
 	middlewareAuth := middlewares.JWTAuthMiddleware()
 	getAllController := http.SetUpGetAllController()
-	getByIdController := http.SetUpGetAllController()
+	getByIdController := http.SetUpDeleteController()
 	createController := http.SetUpCreateController()
 
 	router.Use(middlewareAuth)

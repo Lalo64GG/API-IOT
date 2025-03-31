@@ -28,7 +28,7 @@ func (ctr *DeleteHorarioController)Run(ctx *gin.Context){
 			Success:  false,
 			Message: "Invalid ID",
 			Data:    nil,
-			Error:  err,
+			Error:  err.Error(),
 		})
 		return
 	}
@@ -40,7 +40,7 @@ func (ctr *DeleteHorarioController)Run(ctx *gin.Context){
 			Success:  false,
 			Message: "Error deleting horario",
 			Data:    nil,
-			Error:  err,
+			Error:  err.Error(),
 		})
 		return
 	}

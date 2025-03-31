@@ -29,7 +29,7 @@ func (ctr *CreateProductController) Run(ctx *gin.Context){
 		ctx.JSON(http.StatusBadRequest, responses.Response{
 			Success:  false,
 			Message: "Invalid request",
-			Error:  err,
+			Error:  err.Error(),
 			Data: nil,
 		})
 		return
@@ -39,7 +39,7 @@ func (ctr *CreateProductController) Run(ctx *gin.Context){
 		ctx.JSON(http.StatusBadRequest, responses.Response{
 			Success:  false,
 			Message: "Invalid request",
-			Error:  err,
+			Error:  err.Error(),
 			Data: nil,
 		})
 		return
@@ -50,7 +50,7 @@ func (ctr *CreateProductController) Run(ctx *gin.Context){
 		ctx.JSON(http.StatusInternalServerError, responses.Response{
 			Success:  false,
 			Message: "Error creating product",
-			Error:  err,
+			Error:  err.Error(),
 			Data: nil,
 		})
 		return

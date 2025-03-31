@@ -29,6 +29,7 @@ func Migrate(db *sql.DB) error {
 	sqlFiles := []string{
 		"src/database/migrations/sql/000_user_table.sql",
 		"src/database/migrations/sql/001_products_table.sql",
+		"src/database/migrations/sql/002_horario_table.sql",
 	}
 
 	for _,file := range sqlFiles {

@@ -23,7 +23,7 @@ func (ctr *GetAllProductController)Run(ctx *gin.Context){
 			Success:  false,
 			Message: "Error fetching products",
 			Data:    nil,
-			Error:  err,
+			Error:  err.Error(),
 		})
 		return
 	}
