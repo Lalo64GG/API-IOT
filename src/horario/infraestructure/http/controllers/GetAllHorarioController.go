@@ -20,7 +20,6 @@ func NewGetAllHorarioController(horarioService *application.GetAllHorarioUseCase
 
 func (ctr *GetAllHorarioController) Run(ctx *gin.Context) {
 	horarios, err := ctr.HorarioService.Run()
-
 	if err != nil {
 		ctx.JSON(http.StatusInternalServerError, responses.Response{
 			Success:  false,

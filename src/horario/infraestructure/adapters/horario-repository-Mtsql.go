@@ -58,13 +58,12 @@ func (r *HorarioRepositoryMysql) GetAll() ([]entities.Horario, error){
 	var horarios []entities.Horario
 	for rows.Next() {
 		var horario entities.Horario
-		err := rows.Scan(&horario.ID, &horario.Minute, &horario.Hour)
+		err := rows.Scan(&horario.ID,&horario.Hour,  &horario.Minute)
 		if err != nil {
 			return nil, err
 		}
 		horarios = append(horarios, horario)
 	}
-
 	return horarios, nil
 }
 
